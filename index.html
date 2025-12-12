@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Hotelera</title>
+    
+    <!-- 1. Cargamos Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 2. CONFIGURACIÓN DE TU PALETA DE COLORES -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              petroleo: '#005F73',
+              bosque: '#2d6a4f',
+              piedra: '#6c757d',
+              burdeos: '#800F2F',
+              ocre: '#b58900',
+              grafito: '#343a40',
+              purpura: '#4C2A4C',
+              marron: '#834333',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
