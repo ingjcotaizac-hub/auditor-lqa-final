@@ -11,91 +11,97 @@ const SCENARIO_DB = {
     { 
       id: 'r1', 
       url: "https://i.postimg.cc/7ZkVS0Jv/Habitacion-perfecta-1.png", 
-      title: "Escenario Habitación 1", 
+      title: "Estándar 1", 
       feedback: "Esta imagen muestra el estándar ideal: Cama King sin arrugas, simetría perfecta y ausencia de ruido visual.",
       faults: [] 
     },
     { 
       id: 'r2', 
       url: "https://i.postimg.cc/Hkg2bXcN/Habitacion-perfecta-2.png", 
-      title: "Escenario Habitación 2", 
+      title: "Estándar 2", 
       feedback: "Ejemplo de habitación correcta. Fíjate en la alineación precisa del tiro de cama y los cojines centrados.",
       faults: [] 
     },
     { 
       id: 'r3', 
       url: "https://i.postimg.cc/52V38LYn/Habitacion-con-fallo-sutil-1.png", 
-      title: "Escenario Habitación 3", 
+      title: "Revisión Detalle A", 
       feedback: "Deberías haber notado la pequeña arruga en la esquina inferior del edredón. El resto parece correcto.",
       faults: ['hab_cama'] 
     },
     { 
       id: 'r4', 
       url: "https://i.postimg.cc/Z5Sc6pBc/Habitacion-con-fallo-sutil-2.png", 
-      title: "Escenario Habitación 4", 
+      title: "Revisión Detalle B", 
       feedback: "Atención a la manta decorativa: está ligeramente asimétrica. Un ojo experto lo corrige antes de salir.",
       faults: ['hab_cama', 'gen_orden'] 
     },
     { 
       id: 'r5', 
       url: "https://i.postimg.cc/Bn0g2HLc/Habitacion-con-fallo-sutil-3.png", 
-      title: "Escenario Habitación 5", 
+      title: "Revisión Limpieza A", 
       feedback: "Hay objetos fuera de lugar (percha en silla) y posibles marcas en pared. Detalles que denotan falta de revisión final.",
       faults: ['gen_orden', 'gen_limpieza'] 
     },
     { 
       id: 'r6', 
       url: "https://i.postimg.cc/bNbgG3JT/Habitacion-con-fallo-sutil-4.png", 
-      title: "Escenario Habitación 6", 
+      title: "Revisión Técnica", 
       feedback: "La iluminación es clave. Deberías haber reportado la lámpara de la mesita (posiblemente fundida o apagada) y manchas en mobiliario.",
       faults: ['hab_iluminacion', 'hab_mesitas'] 
     },
     { 
       id: 'r7', 
       url: "https://i.postimg.cc/2SDwnhbZ/Habitacion-con-fallo-sutil-5.png", 
-      title: "Escenario Habitación 7", 
+      title: "Revisión Montaje", 
       feedback: "El montaje de bienvenida (bandeja) no está en su sitio estándar. El faldón de la cama también requería atención.",
       faults: ['gen_orden'] 
     },
     { 
       id: 'r8', 
       url: "https://i.postimg.cc/Hkg2bXcw/Habitacion-con-anomalias-moderadas.png", 
-      title: "Escenario Habitación 8", 
+      title: "Incidencia Moderada", 
       feedback: "Varios fallos visibles: Almohada hundida (falta ahuecado), toalla olvidada y papelera sin vaciar.",
       faults: ['hab_cama', 'gen_orden', 'gen_limpieza'] 
     },
     { 
       id: 'r9', 
       url: "https://i.postimg.cc/J4JxyPn5/Habitacion-con-error-garrafal-1.png", 
-      title: "Escenario Habitación 9", 
+      title: "Estado Crítico A", 
       feedback: "Situación inaceptable: Cama sin terminar y restos de comida/bandeja sucia. Requiere intervención inmediata.",
       faults: ['hab_cama', 'gen_orden', 'gen_limpieza', 'hab_mesitas'] 
     },
     { 
       id: 'r10', 
       url: "https://i.postimg.cc/sDSmBwXJ/Habitacion-con-error-garrafal-2.png", 
-      title: "Escenario Habitación 10", 
+      title: "Estado Crítico B", 
       feedback: "Problema grave de limpieza: Objetos bajo la cama (zapatos) y desorden generalizado. No apta para cliente.",
       faults: ['hab_cama', 'gen_limpieza', 'gen_orden'] 
     }
   ],
   BATH: [
-    { id: 'b1', url: "https://i.postimg.cc/VvPmWzy1/Bano-perfecto-1.png", title: "Escenario Baño 1", feedback: "Baño en estado correcto y limpio.", faults: [] },
-    { id: 'b2', url: "https://i.postimg.cc/Gtndxb0d/Bano-perfecto-2.png", title: "Escenario Baño 2", feedback: "Presentación correcta según estándar.", faults: [] },
-    { id: 'b3', url: "https://i.postimg.cc/NFvBkQht/Bano-con-fallo-sutil-1.png", title: "Escenario Baño 3", feedback: "Detalle de limpieza: Gota seca visible en la grifería.", faults: ['bano_grifos'] },
-    { id: 'b4', url: "https://i.postimg.cc/VvPmWmx3/Bano-con-fallo-sutil-2.png", title: "Escenario Baño 4", feedback: "Limpieza de espejos: Hay una huella o marca visible.", faults: ['bano_espejo'] },
-    { id: 'b5', url: "https://i.postimg.cc/SRbkfkB3/Bano-con-fallo-sutil-3.png", title: "Escenario Baño 5", feedback: "Lencería: La toalla presenta una alineación incorrecta o defecto.", faults: ['toallas_colocacion'] },
-    { id: 'b6', url: "https://i.postimg.cc/W3ksZhHf/Bano-con-fallo-sutil-4.png", title: "Escenario Baño 6", feedback: "Reposición: Falta algún elemento de los amenities o está mal colocado.", faults: ['bano_amenities'] },
-    { id: 'b7', url: "https://i.postimg.cc/V6CztdVV/Bano-con-fallo-sutil-5.png", title: "Escenario Baño 7", feedback: "Detalle en inodoro: Precinto o limpieza final mejorable.", faults: ['bano_inodoro'] },
-    { id: 'b8', url: "https://i.postimg.cc/5yWbSbhD/Bano-con-anomalias-moderadas.png", title: "Escenario Baño 8", feedback: "Fallos moderados: Cal visible en grifería y limpieza general.", faults: ['bano_grifos', 'gen_limpieza'] },
-    { id: 'b9', url: "https://i.postimg.cc/gjbmHmCM/Bano-con-error-garrafal-1.png", title: "Escenario Baño 9", feedback: "Error crítico: Suciedad grave en suelo y zona WC.", faults: ['gen_limpieza', 'bano_inodoro', 'toallas_colocacion'] },
-    { id: 'b10', url: "https://i.postimg.cc/KzMmTRHp/Bano-con-error-garrafal-2.png", title: "Escenario Baño 10", feedback: "Desorden generalizado: Toallas y amenities en estado caótico.", faults: ['toallas_colocacion', 'gen_orden', 'bano_amenities'] },
-    { id: 'b11', url: "https://i.postimg.cc/hjdKmf5C/Bano-con-error-garrafal-3.png", title: "Escenario Baño 11", feedback: "Limpieza deficiente en espejo e inodoro.", faults: ['gen_limpieza', 'bano_espejo', 'bano_inodoro'] }
+    { id: 'b1', url: "https://i.postimg.cc/VvPmWzy1/Bano-perfecto-1.png", title: "Baño Escenario 1", feedback: "Baño en estado correcto y limpio.", faults: [] },
+    { id: 'b2', url: "https://i.postimg.cc/Gtndxb0d/Bano-perfecto-2.png", title: "Baño Escenario 2", feedback: "Presentación correcta según estándar.", faults: [] },
+    { id: 'b3', url: "https://i.postimg.cc/NFvBkQht/Bano-con-fallo-sutil-1.png", title: "Baño Escenario 3", feedback: "Detalle de limpieza: Gota seca visible en la grifería.", faults: ['bano_grifos'] },
+    { id: 'b4', url: "https://i.postimg.cc/VvPmWmx3/Bano-con-fallo-sutil-2.png", title: "Baño Escenario 4", feedback: "Limpieza de espejos: Hay una huella o marca visible.", faults: ['bano_espejo'] },
+    { id: 'b5', url: "https://i.postimg.cc/SRbkfkB3/Bano-con-fallo-sutil-3.png", title: "Baño Escenario 5", feedback: "Lencería: La toalla presenta una alineación incorrecta o defecto.", faults: ['toallas_colocacion'] },
+    { id: 'b6', url: "https://i.postimg.cc/W3ksZhHf/Bano-con-fallo-sutil-4.png", title: "Baño Escenario 6", feedback: "Reposición: Falta algún elemento de los amenities o está mal colocado.", faults: ['bano_amenities'] },
+    { id: 'b7', url: "https://i.postimg.cc/V6CztdVV/Bano-con-fallo-sutil-5.png", title: "Baño Escenario 7", feedback: "Detalle en inodoro: Precinto o limpieza final mejorable.", faults: ['bano_inodoro'] },
+    { id: 'b8', url: "https://i.postimg.cc/5yWbSbhD/Bano-con-anomalias-moderadas.png", title: "Baño Escenario 8", feedback: "Fallos moderados: Cal visible en grifería y limpieza general.", faults: ['bano_grifos', 'gen_limpieza'] },
+    { id: 'b9', url: "https://i.postimg.cc/gjbmHmCM/Bano-con-error-garrafal-1.png", title: "Baño Escenario 9", feedback: "Error crítico: Suciedad grave en suelo y zona WC.", faults: ['gen_limpieza', 'bano_inodoro', 'toallas_colocacion'] },
+    { id: 'b10', url: "https://i.postimg.cc/KzMmTRHp/Bano-con-error-garrafal-2.png", title: "Baño Escenario 10", feedback: "Desorden generalizado: Toallas y amenities en estado caótico.", faults: ['toallas_colocacion', 'gen_orden', 'bano_amenities'] },
+    { id: 'b11', url: "https://i.postimg.cc/hjdKmf5C/Bano-con-error-garrafal-3.png", title: "Baño Escenario 11", feedback: "Limpieza deficiente en espejo e inodoro.", faults: ['gen_limpieza', 'bano_espejo', 'bano_inodoro'] }
   ],
   CLOSET: [
     { id: 'c1', url: "https://i.postimg.cc/8cvV0cQN/Armario-perfecto-1.png", title: "Escenario Armario 1", feedback: "Armario perfectamente ordenado y alineado.", faults: [] },
     { id: 'c2', url: "https://i.postimg.cc/j2frF20R/Armario-perfecto-2.png", title: "Escenario Armario 2", feedback: "Presentación correcta, perchas alineadas.", faults: [] },
-    { id: 'c3', url: "https://i.postimg.cc/d3CKx3Pq/Armario-con-fallo-sutil-1.png", title: "Escenario Armario 3", feedback: "Detalle: Una percha está girada o mal colocada.", faults: ['armario_perchas'] },
+    { 
+      id: 'c3', 
+      url: "https://i.postimg.cc/VsCsQW3Q/Armario-con-fallo-sutil-1.png", // IMAGEN ACTUALIZADA
+      title: "Escenario Armario 3", 
+      feedback: "Detalle: Una percha está girada o mal colocada.", 
+      faults: ['armario_perchas'] 
+    },
     { id: 'c4', url: "https://i.postimg.cc/hvmq5vWP/Armario-con-fallo-sutil-2.png", title: "Escenario Armario 4", feedback: "Detalle de lencería: La manta o zapatillas no están alineadas.", faults: ['gen_orden', 'armario_perchas'] },
     { id: 'c5', url: "https://i.postimg.cc/MGSty4HY/Armario-con-fallo-sutil-3.png", title: "Escenario Armario 5", feedback: "Set de planchado: El cable no está recogido correctamente.", faults: ['armario_plancha'] },
     { id: 'c6', url: "https://i.postimg.cc/mrsVQqk4/Armario-con-fallo-sutil-4.png", title: "Escenario Armario 6", feedback: "Detalle visual: Etiqueta visible o mancha leve.", faults: ['armario_perchas', 'gen_limpieza'] },
@@ -113,7 +119,7 @@ const ZONES = {
   GENERAL: "General" 
 };
 
-// Checklist de observación (sin juicio crítico automático)
+// Checklist de observación
 const AUDIT_ITEMS = [
   { id: 'hab_cama', zone: ZONES.HABITACION, label: "Presentación Cama" },
   { id: 'hab_mesitas', zone: ZONES.HABITACION, label: "Orden Mesitas" },
@@ -124,9 +130,11 @@ const AUDIT_ITEMS = [
   
   { id: 'arm_perchas', zone: ZONES.ARMARIO, label: "Orden Perchas" },
   { id: 'arm_caja', zone: ZONES.ARMARIO, label: "Caja Fuerte" },
+  { id: 'armario_plancha', zone: ZONES.ARMARIO, label: "Set Plancha" },
   
   { id: 'gen_suelo', zone: ZONES.GENERAL, label: "Limpieza Suelos" },
-  { id: 'gen_objetos', zone: ZONES.GENERAL, label: "Objetos Olvidados" }
+  { id: 'gen_objetos', zone: ZONES.GENERAL, label: "Objetos Olvidados" },
+  { id: 'gen_orden', zone: ZONES.GENERAL, label: "Orden General" }
 ];
 
 // Componente para mostrar el resultado de un ítem individual
@@ -224,12 +232,14 @@ export default function GobernantaProApp() {
     ];
     
     // Filtramos items relevantes para la auditoría (todos en este caso porque se auditan las 3 zonas)
+    // Para el cálculo de "Total", usamos todos los items.
     const relevantItems = AUDIT_ITEMS;
 
     relevantItems.forEach(item => {
       const userStatus = auditData[item.id];
       const isFaulty = activeFaults.includes(item.id);
 
+      // Lógica de coincidencia
       if (isFaulty) {
         if (userStatus === 'ko') agreementCount++; 
       } else {
@@ -334,7 +344,7 @@ export default function GobernantaProApp() {
             <p className="text-xs text-slate-400">Auditoría Visual</p>
           </div>
           <div className="text-right">
-             <button onClick={generateNewAudit} className="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded flex items-center gap-2 transition border border-slate-700"><RotateCcw className="w-3 h-3" /> Generar Caso Aleatorio</button>
+             <button onClick={generateNewAudit} className="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded flex items-center gap-2 transition border border-slate-700"> Siguiente Caso</button>
           </div>
         </div>
 
@@ -344,12 +354,12 @@ export default function GobernantaProApp() {
             <p><strong>Instrucción:</strong> Observa la foto. ¿Detectas algún fallo en estos puntos? Marca OK si está bien, KO si ves un error.</p>
           </div>
 
-          {/* Renderizado de Items por Zona */}
+          {/* Renderizado de Items por Zona - FILTRO MEJORADO */}
           {Object.entries(AUDIT_ITEMS.filter(i => 
-             (currentView === 'ROOM' && i.zone === ZONES.HABITACION) ||
+             // Ahora los ítems GENERALES solo aparecen en la vista de HABITACIÓN
+             (currentView === 'ROOM' && (i.zone === ZONES.HABITACION || i.zone === ZONES.GENERAL)) ||
              (currentView === 'BATH' && i.zone === ZONES.BANO) ||
-             (currentView === 'CLOSET' && i.zone === ZONES.ARMARIO) ||
-             i.zone === ZONES.GENERAL
+             (currentView === 'CLOSET' && i.zone === ZONES.ARMARIO)
           ).reduce((acc, item) => { acc[item.zone] = acc[item.zone] || []; acc[item.zone].push(item); return acc; }, {})).map(([zone, items]) => (
             <div key={zone} className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
               <div className="bg-slate-100 px-4 py-2 border-b border-slate-200 text-xs font-bold text-slate-600 uppercase tracking-wider">{zone}</div>
@@ -408,14 +418,15 @@ export default function GobernantaProApp() {
                 const zoneData = activeScenario[zoneKey];
                 const zoneIcon = zoneKey === 'ROOM' ? <Hotel className="w-4 h-4"/> : zoneKey === 'BATH' ? <Droplets className="w-4 h-4"/> : <DoorOpen className="w-4 h-4"/>;
                 const zoneName = zoneKey === 'ROOM' ? 'Habitación' : zoneKey === 'BATH' ? 'Baño' : 'Armario';
+                
+                // Filtro para mostrar en el reporte solo lo que se auditó visualmente
+                // Aquí volvemos a mostrar GENERAL en ROOM para que coincida con lo que el usuario vio
                 const zoneItems = AUDIT_ITEMS.filter(i => 
-                  (zoneKey === 'ROOM' && i.zone === ZONES.HABITACION) ||
+                  (zoneKey === 'ROOM' && (i.zone === ZONES.HABITACION || i.zone === ZONES.GENERAL)) ||
                   (zoneKey === 'BATH' && i.zone === ZONES.BANO) ||
-                  (zoneKey === 'CLOSET' && i.zone === ZONES.ARMARIO) ||
-                  (i.zone === ZONES.GENERAL && zoneKey === 'ROOM') // Mostrar generales solo en una zona o duplicar si se quiere
+                  (zoneKey === 'CLOSET' && i.zone === ZONES.ARMARIO)
                 );
                 
-                // Mostrar solo si hay items relevantes para esta zona
                 if (zoneItems.length === 0) return null;
 
                 return (
