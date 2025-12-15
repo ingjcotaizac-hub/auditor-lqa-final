@@ -4,18 +4,6 @@ import {
   AlertCircle, Hotel, Save, RotateCcw, ZoomIn, ZoomOut, 
   Maximize, Map, Droplets, DoorOpen, ChevronRight, ChevronLeft, CheckCircle, Ban, Eye, Info, FileText, Check
 } from 'lucide-react';
-
-// --- CANDADO DE DOMINIO (SEGURIDAD AVANZADA) ---
-useEffect(() => {
-  // 1. Define tus dominios permitidos
-  const allowedDomains = [
-    'otaingenio.es', 
-    'www.otaingenio.es', 
-    'campus.otaingenio.es',
-    'auditor-lqa-final.vercel.app/', // <-- AÑADIDO: Tu despliegue en Vercel
-    'localhost',
-    // Para que funcione en la preview (borrar al subir a producción si quieres seguridad máxima)
-  ]; 
   
 // --- BASE DE DATOS DE ESCENARIOS (FOTOS REALES) ---
 const SCENARIO_DB = {
